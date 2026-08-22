@@ -1,0 +1,572 @@
+meta:
+  engine: 4.1.0
+  author: Henry Hu
+units:
+  kx: U
+  ky: U
+  px: kx + 4
+  py: ky + 4
+  screwSize: 1
+points:
+  zones:
+    matrix:
+      key:
+        padding: kx+0.5
+        spread: ky+0.5
+        width: kx
+        height: ky
+      rows:
+        mod:
+          row_net: P14          
+        bottom:
+          row_net: P15          
+        middle:
+          row_net: P18
+        top:
+          row_net: P19
+        number:
+          row_net: P20
+        fn:
+          row_net: P21
+      columns:
+        first:
+          rows:
+            mod:
+              width: 2.25u
+              shift: [0.5u, 0]
+              key.led_prev: led_second_mod
+              key.led_next: led_first_mod
+            bottom:
+              key.led_prev: led_first_middle
+              key.led_next: led_first_bottom
+            middle:
+              shift: [-0.5u, 0]
+              key.led_prev: led_second_middle
+              key.led_next: led_first_middle
+            top:  
+              shift: [-0.275u, 0]
+              key.led_prev: led_first_number
+              key.led_next: led_first_top
+            number:
+              shift: [0.525u, 0]
+              key.led_prev: led_second_number
+              key.led_next: led_first_number
+            fn:
+              key.led_prev: P4
+              key.led_next: led_first_fn
+          key:
+            column_net: P16
+        second:
+          rows:
+            mod:
+              width: 1.25u
+              shift: [1.25u, 0]
+              key.led_prev: led_third_mod
+              key.led_next: led_second_mod
+            bottom:
+              shift: [-0.75u, 0]
+              key.led_prev: led_first_bottom
+              key.led_next: led_second_bottom
+            middle:
+              shift: [-0.5u, 0]
+              key.led_prev: led_third_middle
+              key.led_next: led_second_middle
+            top:
+              shift: [-0.275u, 0]
+              key.led_prev: led_first_top
+              key.led_next: led_second_top
+            number:
+              shift: [0.525u, 0]
+              key.led_prev: led_third_number
+              key.led_next: led_second_number
+            fn:
+              key.led_prev: led_first_fn
+              key.led_next: led_second_fn
+          key:
+            column_net: P10
+        third:
+          rows:
+            mod:
+              width: 1.25u
+              shift: [1.5u, 0]
+              key.led_prev: led_fourth_mod
+              key.led_next: led_third_mod
+            bottom:
+              shift: [-u, 0]
+              key.led_prev: led_second_bottom
+              key.led_next: led_third_bottom
+            middle:
+              shift: [-0.5u, 0]
+              key.led_prev: led_fourth_middle
+              key.led_next: led_third_middle
+            top:
+              shift: [-0.275u, 0]
+              key.led_prev: led_second_top
+              key.led_next: led_third_top
+            number:
+              shift: [0.525u, 0]
+              key.led_prev: led_fourth_number
+              key.led_next: led_third_number
+            fn:
+              shift: [0.25u, 0]
+              key.led_prev: led_second_fn
+              key.led_next: led_third_fn
+          key:
+            column_net: P9
+        fourth:
+          rows:
+            mod:
+              width: 1u
+              shift: [1.75u, 0]
+              key.led_prev: led_fifth_mod
+              key.led_next: led_fourth_mod
+            bottom:
+              shift: [-1.25u, 0]
+              key.led_prev: led_third_bottom
+              key.led_next: led_fourth_bottom
+            middle:
+              shift: [-0.5u, 0]
+              key.led_prev: led_fifth_middle
+              key.led_next: led_fourth_middle
+            top:
+              shift: [-0.275u, 0]
+              key.led_prev: led_third_top
+              key.led_next: led_fourth_top
+            number:
+              shift: [0.525u, 0]
+              key.led_prev: led_fifth_number
+              key.led_next: led_fourth_number
+            fn:
+              shift: [0.25u, 0]
+              key.led_prev: led_third_fn
+              key.led_next: led_fourth_fn
+          key:
+            column_net: P8
+        fifth:
+          rows:
+            mod:
+              width: 1u
+              shift: [1.75u, 0]
+              key.led_prev: led_sixth_mod
+              key.led_next: led_fifth_mod
+            bottom:
+              shift: [-1.25u, 0]
+              key.led_prev: led_fourth_bottom
+              key.led_next: led_fifth_bottom
+            middle:
+              shift: [-0.5u, 0]
+              key.led_prev: led_sixth_middle
+              key.led_next: led_fifth_middle
+            top:
+              shift: [-0.275u, 0]
+              key.led_prev: led_fourth_top
+              key.led_next: led_fifth_top
+            number:
+              shift: [0.525u, 0]
+              key.led_prev: led_sixth_number
+              key.led_next: led_fifth_number
+            fn:
+              shift: [0.25u, 0]
+              key.led_prev: led_fourth_fn
+              key.led_next: led_fifth_fn
+          key:
+            column_net: P7
+        sixth:
+          rows:
+            mod:
+              width: 1u
+              shift: [1.75u, 0]
+              key.led_prev: led_eighth_mod
+              key.led_next: led_sixth_mod
+            bottom:
+              shift: [-1.03u, 0]
+              key.led_prev: led_fifth_bottom
+              key.led_next: led_sixth_bottom
+            middle:
+              shift: [-0.72u, 0]
+              key.led_prev: led_seventh_middle
+              key.led_next: led_sixth_middle
+            top:
+              shift: [-0.275u, 0]
+              key.led_prev: led_fifth_top
+              key.led_next: led_sixth_top
+            number:
+              shift: [0.525u, 0]
+              key.led_prev: led_seventh_number
+              key.led_next: led_sixth_number
+            fn:
+              shift: [0.25u, 0]
+              key.led_prev: led_fifth_fn
+              key.led_next: led_sixth_fn
+          key:
+            column_net: P6
+        seventh:
+          rows:
+            mod:
+              skip: true
+            bottom:
+              name: matrix_seventh_middle
+              width: 1.75u
+              shift: [0.375u, u+0.5]
+              key.led_prev: led_eighth_middle
+              key.led_next: led_seventh_middle
+            middle:
+              #width: 1.5u
+              name: matrix_slash_top
+              shift: [0.375u, 0]
+              key.led_prev: led_seventh_top
+              key.led_next: led_slash_top
+            top:
+              shift: [-1.025u, -u-0.5]
+              key.led_prev: led_sixth_top
+              key.led_next: led_seventh_top
+            number:
+              width: 1.5u
+              shift: [0.775u, 0]
+              key.led_prev: led_eighth_number
+              key.led_next: led_seventh_number
+            fn:
+              shift: [0.25u, 0]
+              key.led_prev: led_sixth_fn
+              key.led_next: led_seventh_fn
+          key:
+            column_net: P5
+        eighth:
+          rows:
+            mod:
+              shift: [u, 0]
+              key.led_prev: led_eighth_bottom
+              key.led_next: led_eighth_mod
+            bottom:
+              key.led_prev: led_sixth_bottom
+              key.led_next: led_eighth_bottom
+            middle:
+              key.led_prev: led_eighth_top
+              key.led_next: led_eighth_middle
+            top:
+              key.led_prev: led_slash_top
+              key.led_next: led_eighth_top
+            number:
+              key.led_prev: led_eighth_fn
+              key.led_next: led_eighth_number
+            fn:
+              key.led_prev: led_seventh_fn
+              key.led_next: led_eighth_fn
+          key:
+            column_net: P1
+      anchor:
+        shift: [100, -150]
+outlines:
+  raw:
+    - what: rectangle
+      where: true
+      size: [px, py]
+  keys:
+    - what: rectangle
+      where: true
+      size: [kx - 0.5, ky - 0.5]
+  key_hole:
+    - what: rectangle
+      where: true
+      size: [14, 14]
+  board:
+    - what: polygon
+      operation: stack
+      points:
+        - ref: matrix_first_fn
+          shift: [-1.5px, 0.5py]
+        - ref: matrix_eighth_fn
+          shift: [0.5px, 0.5py]
+        - ref: matrix_eighth_mod
+          shift: [0.5px, -0.5py]
+        - ref: matrix_first_mod
+          shift: [-1.7px, -0.5py]
+      fillet: 2
+  top:
+    - what: polygon
+      operation: stack
+      points:
+        - ref: matrix_first_fn
+          shift: [-0.6px, -0.45py]
+        - ref: matrix_first_fn
+          shift: [-0.6px, 0.5py]
+        - ref: matrix_eighth_fn
+          shift: [0.5px, 0.5py]
+        - ref: matrix_eighth_mod
+          shift: [0.5px, -0.5py]
+        - ref: matrix_first_mod
+          shift: [-0.9px, -0.5py]
+        - ref: matrix_first_mod
+          shift: [-0.9px, 0.4py]
+        - ref: matrix_first_bottom
+          shift: [-0.5px, -0.45py]
+        - ref: matrix_first_bottom
+          shift: [-0.5px, 0.4py]
+        - ref: matrix_first_middle
+          shift: [-0.5px, -0.45py]
+        - ref: matrix_first_middle
+          shift: [-0.5px, 0.4py]
+        - ref: matrix_first_top
+          shift: [-0.5px, -0.45py]
+        - ref: matrix_first_top
+          shift: [-0.5px, 0.45py]
+        - ref: matrix_first_number
+          shift: [-0.5px, -0.4py]
+        - ref: matrix_first_number
+          shift: [-0.5px, 0.4py]
+      fillet: 2
+  combo:
+    - name: board
+    - operation: subtract
+      name: keys
+  top_plate:
+    - name: top
+    - operation: subtract
+      name: key_hole
+  mounting:
+    - what: circle
+      radius: screwSize
+      where:
+        ref: [matrix_first_fn]
+        shift: [-0.5kx, -0.3ky]
+    - what: circle
+      radius: screwSize
+      where:
+        ref: [matrix_seventh_fn]
+        shift: [0.5kx, -0.2ky]
+    - what: circle
+      radius: screwSize
+      where:
+        ref: [matrix_first_mod]
+        shift: [-0.5kx, -0.3ky]
+    - what: circle
+      radius: screwSize
+      where:
+        ref: [matrix_eighth_mod]
+        shift: [-0.5kx, -0.3ky]
+pcbs:
+  right:
+    template: kicad8
+    outlines:
+      main:
+        outline: board
+    footprints:
+      choc_hotswap:
+        what: ceoloide/switch_choc_v1_v2
+        where: true
+        params:
+          include_keycap: true
+          #include_choc_v1_led_cutout_marks: true
+          keycap_height: u
+          keycap_width: u
+          hotswap: true
+          #hotswap_pads_same_side: true
+          choc_v2_support: false
+          
+          from: "{{column_net}}"
+          to: "{{colrow}}"
+          hotswap_3dmodel_filename: "${KICAD_USER_3DMODEL_DIR}/Choc_V1_Hotswap.step"
+          hotswap_3dmodel_xyz_rotation: [180, 0, 0]
+          hotswap_3dmodel_xyz_offset: [0, 0, -1.5]
+          switch_3dmodel_filename: "${KICAD_USER_3DMODEL_DIR}/Choc_V1_Switch.step"
+          switch_3dmodel_xyz_rotation: [180, 0, 0]
+      spacebar:
+        what: choc_stabilizer
+        where: /matrix_first_mod/
+        adjust:
+          rotate: 180
+      diode:
+        what: ceoloide/diode_tht_sod123
+        where: true
+        params:
+          from: "{{colrow}}"
+          to: "{{row_net}}"
+          diode_3dmodel_filename: "${KICAD_USER_3DMODEL_DIR}/Diode_1N4148W.step"
+          diode_3dmodel_xyz_rotation: [90, 0, 0]
+        adjust:
+          shift: [5, 8]
+      rgb:
+        what: ceoloide/led_sk6812mini-e
+        where: /^matrix_.*_(fn|top|bottom)/
+        params:
+          vcc_trace_width: 0.4
+          gnd_trace_width: 0.4
+          include_traces_vias: false
+          P2: "{{key.led_next}}"
+          P4: "{{key.led_prev}}"
+          led_3dmodel_filename: "${KICAD10_3DMODEL_DIR}/LED_SMD.3dshapes/LED_SK6812MINI-E_3.2x2.8mm_P1.5mm_ReverseMount.step"
+        adjust:
+          shift: [0, -4.65]
+      rgb_inverse:
+        what: ceoloide/led_sk6812mini-e
+        where: /^matrix_.*_(number|middle|mod)/
+        params:
+          vcc_trace_width: 0.4
+          gnd_trace_width: 0.4
+          P2: "{{key.led_next}}"
+          P4: "{{key.led_prev}}"
+          led_3dmodel_filename: "${KICAD10_3DMODEL_DIR}/LED_SMD.3dshapes/LED_SK6812MINI-E_3.2x2.8mm_P1.5mm_ReverseMount.step"
+        adjust:
+          shift: [0, -4.65]
+          rotate: 180
+      mcu:
+        what: ceoloide/mcu_nice_nano
+        where:
+          ref: matrix_first_fn
+          shift: [-px, -0.3py]
+        params:
+          reverse_mount: true
+          mcu_3dmodel_filename: "${KICAD_USER_3DMODEL_DIR}/Nice_Nano_V2.step"
+      oled:
+        what: ceoloide/display_ssd1306
+        params:
+          side: "F"
+          SDA: P2
+          SCL: P3
+        where:
+          ref: matrix_first_fn
+          shift: [-px, -0.4py]
+      battery:
+        what: ceoloide/battery_connector_jst_ph_2
+        where:
+          ref: matrix_first_top
+          shift: [-0.75px, -0.2py]
+          rotate: 180
+        params:
+          BAT_P: POS
+          BAT_N: GND
+          battery_connector_3dmodel_filename: "${KICAD10_3DMODEL_DIR}/Connector_JST.3dshapes/JST_PH_S2B-PH-K_1x02_P2.00mm_Horizontal.step"
+          battery_connector_3dmodel_xyz_offset: [-1, 0, 0]
+      power:
+        what: ceoloide/power_switch_smd_side
+        where:
+          ref: matrix_first_middle
+          shift: [-px, 0.2px]
+        params:
+          from: POS
+          to: RAW
+          switch_3dmodel_filename: "${KICAD_USER_3DMODEL_DIR}/Switch_Power.step"
+          switch_3dmodel_xyz_rotation: [-90, 0, -90]
+        adjust:
+          rotate: 180
+      reset:
+        what: ceoloide/reset_switch_smd_side
+        params:
+          side: "B"
+          from: GND
+          to: RST
+          reset_switch_3dmodel_filename: "${KICAD_USER_3DMODEL_DIR}/Switch_Reset.step"
+          reset_switch_3dmodel_xyz_rotation: [-90, 0, 0]
+        where:
+          ref: matrix_first_middle
+          shift: [-0.75px, 0]
+        adjust:
+          rotate: 90
+      logo:
+        what: ceoloide/utility_ergogen_logo
+        where:
+          ref: [matrix_first_mod]
+          shift: [-1.4kx, 0.25ky]
+        params:
+          scale: 2
+      brand:
+        what: ceoloide/utility_text
+        where:
+          ref: [matrix_first_bottom]
+          shift: [-1.25kx, 0]
+        params:
+          height: 2
+          width: 2
+          text: "jegan v0.1\\nby HenryHu"
+      holeTopLeft:
+        what: ceoloide/mounting_hole_npth
+        where:
+          ref: [matrix_first_fn]
+          shift: [-0.6kx, 0]
+      holeTopRight:
+        what: ceoloide/mounting_hole_npth
+        where:
+          ref: [matrix_eighth_fn]
+          shift: [-0.65kx, 0]
+      holeBottomLeft:
+        what: ceoloide/mounting_hole_npth
+        where:
+          ref: [matrix_first_mod]
+          shift: [-0.6kx-6, -0.3ky]
+      holeBottomRight:
+        what: ceoloide/mounting_hole_npth
+        where:
+          ref: [matrix_eighth_mod]
+          shift: [-0.65kx, -0.3ky]
+  right_top:
+    template: kicad8
+    outlines:
+      main:
+        outline: top_plate
+    footprints:
+      spacebar:
+        what: choc_stabilizer_top_plate
+        where:
+          ref: [matrix_first_mod]
+        adjust:
+          rotate: 180
+      holeTopLeft:
+        what: ceoloide/mounting_hole_npth
+        where:
+          ref: [matrix_first_fn]
+          shift: [-0.6kx, 0]
+      holeTopRight:
+        what: ceoloide/mounting_hole_npth
+        where:
+          ref: [matrix_eighth_fn]
+          shift: [-0.65kx, 0]
+      holeBottomLeft:
+        what: ceoloide/mounting_hole_npth
+        where:
+          ref: [matrix_first_mod]
+          shift: [-0.6kx-6, -0.3ky]
+      holeBottomRight:
+        what: ceoloide/mounting_hole_npth
+        where:
+          ref: [matrix_eighth_mod]
+          shift: [-0.65kx, -0.3ky]
+  right_bottom:
+    template: kicad8
+    outlines:
+      main:
+        outline: board
+    footprints:
+      holeTopLeft:
+        what: ceoloide/mounting_hole_npth
+        where:
+          ref: [matrix_first_fn]
+          shift: [-0.6kx, 0]
+      holeTopRight:
+        what: ceoloide/mounting_hole_npth
+        where:
+          ref: [matrix_eighth_fn]
+          shift: [-0.65kx, 0]
+      holeBottomLeft:
+        what: ceoloide/mounting_hole_npth
+        where:
+          ref: [matrix_first_mod]
+          shift: [-0.6kx-6, -0.3ky]
+      holeBottomRight:
+        what: ceoloide/mounting_hole_npth
+        where:
+          ref: [matrix_eighth_mod]
+          shift: [-0.65kx, -0.3ky]
+cases:
+  bottom:
+    - name: board
+      extrude: 1
+  _holes:
+    - name: mounting
+      extrude: 4
+  case:
+    - what: case
+      name: bottom
+      operation: add
+    - what: case
+      name: _holes
+      operation: add
