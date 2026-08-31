@@ -6,7 +6,7 @@ module.exports = {
         class: 'HOLE',
     },
     body: p => `
-    (module Choc-2.25u-stabilizer (layer F.Cu) (attr smd)
+    (footprint Choc-2.25u-stabilizer (layer F.Cu) (attr smd)
 	${p.at}
     (property "Reference" "${p.ref}"
       (at 0 -15 ${p.r})
